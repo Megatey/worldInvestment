@@ -1,16 +1,18 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom'
 
 const Heritage = () => {
+  const navigate = useNavigate();
   return (
     <div className="story">
       <div className="story-div">
         <div className="heri-note">
           <h2>Our heritage</h2>
-          Tracing Shell’s history takes you on a journey from London to Asia,
-          from the birth of the motor car to the development of sustainable
+          Tracing World International Investment’s history takes you on a journey from Rivers Nigeria to some parts around the world,
+          the development of sustainable
           fuels. It is a history of exploration, innovation and a pioneering
-          spirit that still guides Shell to this day.
-          <button>Learn more about our heritage</button>
+          spirit that still guides World International Investment to this day.
+          <button onClick={() => navigate('/our-heritage')}>Learn more about our heritage</button>
         </div>
       </div>
       <div className="story-div-img heritage-img">

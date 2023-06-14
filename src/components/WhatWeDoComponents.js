@@ -1,5 +1,4 @@
 import React from "react";
-import WhatWeDo from "./WhatWeDo";
 import { Link } from "react-router-dom";
 const WhatWeDoComponents = () => {
   return (
@@ -7,9 +6,9 @@ const WhatWeDoComponents = () => {
       <div className="about-us-div">
         <div className="about-us-div-header">
         <Link to={'/'}>   <span className="about-us-div-header-span">Home </span></Link>
-          <span> > </span>
+          <span>  {'>'} </span>
           <Link to={'/about-us'}>   <span className="about-us-div-header-span">About Us</span></Link>
-          <span> > </span>
+          <span> {'>'} </span>
           <span className="about-us-div-header-span">What We Do</span>
         </div>
         <div className="padding-wrap">
@@ -29,7 +28,7 @@ const WhatWeDoComponents = () => {
               economically, environmentally and socially responsible.</div>
         </div>
         <div className="text-note text-pad">
-          At [Company Name], we are dedicated to providing comprehensive
+        <h1> At World International Investment</h1> we are dedicated to providing comprehensive
           solutions and services that empower the oil and gas industry to thrive
           in a challenging and ever-changing landscape. With our deep industry
           expertise and commitment to excellence, we deliver exceptional results
@@ -47,7 +46,7 @@ const WhatWeDoComponents = () => {
           that enable refineries to meet regulatory requirements, reduce energy
           consumption, and enhance profitability. Distribution and Logistics:
           Efficient distribution and logistics are essential for a seamless
-          supply chain in the oil and gas industry. At [Company Name], we
+          supply chain in the oil and gas industry.<br/><br/> At World International Investment, we
           specialize in developing customized logistics solutions that optimize
           transportation, storage, and distribution networks. Our expertise in
           supply chain management ensures timely and cost-effective delivery of
@@ -60,8 +59,8 @@ const WhatWeDoComponents = () => {
           requirements. We adhere to the highest industry standards, ensuring
           the successful execution of projects on time, within budget, and with
           a strong focus on safety. Technology and Innovation: Embracing
-          innovation is a key driver of success in the oil and gas industry. At
-          [Company Name], we are committed to staying at the forefront of
+          innovation is a key driver of success in the oil and gas industry.<br/><br/> At
+          World International Investment, we are committed to staying at the forefront of
           technological advancements. We invest in research and development to
           develop cutting-edge solutions that address industry challenges. From
           digital transformation and automation to data analytics and artificial
@@ -79,7 +78,7 @@ const WhatWeDoComponents = () => {
           challenges and making informed decisions. Our industry experts offer
           strategic guidance, market insights, and customized solutions that
           empower our clients to adapt to market dynamics, mitigate risks, and
-          capitalize on emerging opportunities. At [Company Name], we are
+          capitalize on emerging opportunities.<br/><br/> At World International Investment, we are
           committed to delivering excellence in every aspect of our work. Our
           comprehensive solutions, industry expertise, and unwavering dedication
           to customer satisfaction make us a trusted partner for oil and gas

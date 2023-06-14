@@ -10,15 +10,15 @@ const WhoWeAre = () => {
       <div className="about-us-div">
         <div className="about-us-div-header">
         <Link to={'/'}>     <span className="about-us-div-header-span">Home </span></Link>
-          <span> > </span>
+          <span> {'>'}</span>
           <Link to={'/about-us'}>   <span className="about-us-div-header-span">About Us</span></Link>
-          <span> > </span>
+          <span> {'>'} </span>
           <span className="about-us-div-header-span">Who We Are</span>
         </div>
         <div className="about-us-div-header-img are">
           <span className="about-us-div-header-img-txt display-none-reverse">
             <h1> WHO WE ARE</h1>
-            Shell is an international energy company with expertise in the
+           World international Investment Plc is an international energy company with expertise in the
             exploration, production, refining and marketing of oil and natural
             gas, and the manufacturing and marketing of chemicals. We use
             advanced technologies and take an innovative approach to help build
@@ -29,7 +29,7 @@ const WhoWeAre = () => {
           </span>
         </div>
         <div className="text-note display-none"><h1> WHO WE ARE</h1>
-            Shell is an international energy company with expertise in the
+        World international Investment Plc is an international energy company with expertise in the
             exploration, production, refining and marketing of oil and natural
             gas, and the manufacturing and marketing of chemicals. We use
             advanced technologies and take an innovative approach to help build
@@ -39,12 +39,13 @@ const WhoWeAre = () => {
             advanced biofuels and hydrogen.</div>
         <div className="text-note tn-note">
           <span className="span-width">
-            Shell was formed in 1907, although our history can be traced back to
-            the first half of the 19th century.<br/>The Chief Executive Officer is Wael Sawan.
+          World international Investment Plc was formed in the 2000's, although <Link to={'/history'}>our history</Link> can be traced back to
+            the first half of the 20th century.<br/>  Rt Capt. Charles Onuoha. BSC/MSC. Electrical Engr & strategy
+              management. (CEO)
           </span>
 
           <span>
-            <h2> Our purpose </h2>Shell’s
+            <h2> Our purpose </h2>World international Investment's
             purpose is to power progress together by providing more and cleaner
             energy solutions. We believe that rising standards of living for a
             growing global population are likely to continue to drive demand for
@@ -54,10 +55,10 @@ const WhoWeAre = () => {
           </span>
           <span>
           <h2>   Our people </h2> people are essential to the successful delivery of
-            the Shell strategy and to sustaining business performance over the
+            the World international Investment strategy and to sustaining business performance over the
             long term. Performing competitively in the evolving energy landscape
             requires competent and empowered people working safely together
-            across Shell. We believe that diverse teams led by inclusive leaders
+            across World international Investment. We believe that diverse teams led by inclusive leaders
             deliver better safety and business performance.
           </span>
         </div>

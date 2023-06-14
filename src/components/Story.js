@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom'
 
 const Story = () => {
+  const navigate = useNavigate();
   return (<section id="story">
     <div className="story">
       <div className="story-div"><div>
@@ -8,7 +10,7 @@ const Story = () => {
         plc Executive Committee, led by Rt Capt. Charles Onuoha. Bsc/MSC.
         Electrical Engr & strategy management. (CEO), is responsible for running
         WIIPC’s businesses and delivering on its corporate strategy.
-        <button>Read the stories</button>
+        <button onClick={() => navigate('/ceo-speech')}>Read the speeches</button>
       </div></div>
       <div className="story-div-img">
         {" "}

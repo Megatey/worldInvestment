@@ -8,12 +8,12 @@ const PrivacyNotices = () => {
       <div className="about-us-div">
         <div className="about-us-div-header">
         <Link to={'/'}>    <span className="about-us-div-header-span">Home </span></Link>
-          <span> > </span>
+          <span>{'>'}</span>
           <span className="about-us-div-header-span">Pricacy Notices</span>
         </div>
 
         <div className="mid">
-      <h1>Privacy notices</h1>
+      <h1>Privacy Notices</h1>
           <h3>At World International Investment Plc</h3> We are committed to
           protecting the privacy and confidentiality of your personal
           information. This Privacy Notice explains how we collect, use, and

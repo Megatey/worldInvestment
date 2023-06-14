@@ -1,22 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import TopBtn from "./TopBtn";
 import SideBar from "./SideBar";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-
 
 const TermsConditions = () => {
   AOS.init({
     duration: 1200,
-  })
-  
+  });
+
   return (
     <div className="about-us pad-top">
       <div className="about-us-div">
         <div className="about-us-div-header">
-         <Link to={'/'}> <span className="about-us-div-header-span">Home </span></Link>
-          <span> > </span>
+          <Link to={"/"}>
+            {" "}
+            <span className="about-us-div-header-span">Home </span>
+          </Link>
+          <span> {">"}</span>
           <span className="about-us-div-header-span">Terms & Conditions</span>
         </div>
 
@@ -24,89 +26,95 @@ const TermsConditions = () => {
           <h1> TERMS AND CONDITIONS</h1>
           <span>
             {" "}
-            Welcome to the Shell.com topsite. This web site is owned and
-            operated by Shell International B.V., a company registered in The
-            Netherlands with registered number 27155369 whose registered office
-            is at Carel van Bylandtlaan 30, 2596 HR The Hague, The Netherlands.<br/>
+            Welcome to the WorldInternationalInvestment.com topsite. This web
+            site is owned and operated by World International Investment, a
+            company registered in The Nigeria with registered number 27155369
+            whose registered office is at NNPC Bonny Export Terminal Office,
+            Bonny, Rivers State Nigeria.
+            <br />
           </span>
         </div>
 
         <div className="about-us-div-header-img terms">
           <span className="about-us-div-header-img-txt display-none-reverse">
             <h1> Our Terms</h1>
-            These Terms and Conditions ("Terms") govern your use of the [Company
-            Name] oil and gas website ("Website"). By accessing or using the
-            Website, you agree to be bound by these Terms. If you do not agree
-            to these Terms, please refrain from using the Website.
+            These Terms and Conditions govern your use of the World
+            International Investment oil and gas website. By accessing or using
+            the Website, you agree to be bound by these Terms. If you do not
+            agree to these Terms, please refrain from using the Website.
           </span>
         </div>
-<div className="text-note display-none" data-aos="slide-up"><h1> Our Terms</h1>
-            These Terms and Conditions ("Terms") govern your use of the [Company
-            Name] oil and gas website ("Website"). By accessing or using the
-            Website, you agree to be bound by these Terms. If you do not agree
-            to these Terms, please refrain from using the Website.</div>
+        <div className="text-note display-none" data-aos="slide-up">
+          <h1> Our Terms</h1>
+          These Terms and Conditions govern your use of the World International
+          Investment oil and gas website. By accessing or using the Website, you
+          agree to be bound by these Terms. If you do not agree to these Terms,
+          please refrain from using the Website.
+        </div>
 
         <div className="white" data-aos="slide-up">
           <div className="white-div1">
             <ul>
-              <a href="#Can">
+              <a href="#Use-of-the-Website">
                 {" "}
                 <li className="white-active">Use of the Website</li>
               </a>
-              <a href="#will">
+              <a href="#Intellectual-Property">
                 {" "}
                 <li>Intellectual Property</li>
               </a>
-              <a href="#why">
+              <a href="#User-Submissions">
                 {" "}
                 <li>User Submissions</li>
               </a>
-              <a href="#what">
+              <a href="#Third-Party-Websites-and-Content">
                 {" "}
                 <li>Third-Party Websites and Content</li>
               </a>
-              <a href="#estimate">
+              <a href="#Disclaimer-of-Warranties">
                 {" "}
                 <li>Disclaimer of Warranties</li>
               </a>
-              <a href="#does">
+              <a href="#Limitation-of-Liability">
                 {" "}
                 <li>Limitation of Liability</li>
               </a>
-              <a href="#deliver">
+              <a href="#Indemnification">
                 {" "}
                 <li>Indemnification</li>
               </a>
-              <a href="#order">
+              <a href="#Termination">
                 {" "}
                 <li>Termination</li>
               </a>
-              <a href="#order">
+              <a href="#Governing-Law">
                 {" "}
                 <li>Governing Law</li>
               </a>
 
-              <a href="#what">
+              <a href="#Entire-Agreement">
                 {" "}
                 <li> Entire Agreement</li>
               </a>
-             
             </ul>
-        </div>
+          </div>
 
           <div className="main-faqs" data-aos="slide-up">
             <div>
               <h2> Use of the Website: </h2>
               <br />
               a. You must be at least 18 years old to use the Website or have
-              the consent of a legal guardian. <br /><br />
+              the consent of a legal guardian. <br />
+              <br />
               b. You agree to use the Website for lawful purposes only and in
               compliance with applicable laws, regulations, and these Terms.{" "}
-              <br /><br />
+              <br />
+              <br />
               c. You are solely responsible for maintaining the confidentiality
               of your account, login credentials, and any activities conducted
               through your account.
-              <br /><br />
+              <br />
+              <br />
               d. You agree not to engage in any unauthorized use, tampering, or
               disruption of the Website, including but not limited to hacking,
               introducing viruses, or any activity that may harm the Website or
@@ -118,22 +126,25 @@ const TermsConditions = () => {
               <br />
               a. The Website and its content, including but not limited to text,
               images, logos, trademarks, videos, and graphics, are the property
-              of [Company Name] and are protected by intellectual property laws.
-              <br /><br />
+              of World International Investment Plc and are protected by intellectual property laws.
+              <br />
+              <br /> 
               b. You may not reproduce, distribute, modify, or use any part of
               the Website or its content without prior written permission from
-              [Company Name].
+              World International Investment Plc.
             </div>
 
             <div>
               <h2>User Submissions:</h2>
-              <br /><br />
+              <br />
+              <br />
               a. By submitting any content, information, or materials to the
-              Website, you grant [Company Name] a non-exclusive, royalty-free,
+              Website, you grant World International Investment Plc a non-exclusive, royalty-free,
               perpetual, worldwide, and irrevocable license to use, reproduce,
               modify, adapt, publish, translate, distribute, and display such
               submissions.
-              <br /><br />
+              <br />
+              <br />
               b. You represent and warrant that any content you submit does not
               infringe upon the rights of any third party, including copyright,
               trademark, or privacy rights.
@@ -143,9 +154,10 @@ const TermsConditions = () => {
               <h2> Third-Party Websites and Content:</h2>
               <br />
               a. The Website may contain links to third-party websites or
-              display content from third-party sources. [Company Name] does not
+              display content from third-party sources. World International Investment Plc does not
               endorse or assume any responsibility for the accuracy,
-              reliability, or legality of such websites or content. <br /><br />
+              reliability, or legality of such websites or content. <br />
+              <br />
               b. Your use of third-party websites or content is at your own
               risk, and you should review the terms and privacy policies of
               those websites before using them.
@@ -158,8 +170,9 @@ const TermsConditions = () => {
               available" basis without any warranties or representations,
               whether express or implied, including but not limited to
               warranties of merchantability, fitness for a particular purpose,
-              or non-infringement. <br /><br />
-              b. [Company Name] does not guarantee the accuracy, completeness,
+              or non-infringement. <br />
+              <br />
+              b. World International Investment Plc does not guarantee the accuracy, completeness,
               or reliability of the information provided on the Website. You
               acknowledge and agree that your use of the Website is at your own
               risk.
@@ -168,11 +181,12 @@ const TermsConditions = () => {
             <div>
               <h2> Limitation of Liability:</h2>
               <br />
-              a. To the fullest extent permitted by law, [Company Name] shall
+              a. To the fullest extent permitted by law, World International Investment Plc shall
               not be liable for any direct, indirect, incidental, consequential,
               or punitive damages arising out of or in connection with your use
-              of the Website. <br /><br />
-              b. [Company Name] shall not be liable for any damages or losses
+              of the Website. <br />
+              <br />
+              b. World International Investment Plc shall not be liable for any damages or losses
               resulting from interruptions, delays, or errors in the operation
               of the Website or any technical issues or unauthorized access to
               your personal information.
@@ -181,7 +195,7 @@ const TermsConditions = () => {
             <div>
               <h2>Indemnification: </h2>
               <br />
-              You agree to indemnify, defend, and hold harmless [Company Name],
+              You agree to indemnify, defend, and hold harmless World International Investment Plc,
               its officers, directors, employees, and affiliates from any
               claims, losses, damages, liabilities, costs, and expenses,
               including reasonable attorneys' fees, arising out of or related to
@@ -191,7 +205,7 @@ const TermsConditions = () => {
             <div>
               <h2> Termination: </h2>
               <br />
-              [Company Name] reserves the right to suspend or terminate your
+              World International Investment Plc reserves the right to suspend or terminate your
               access to the Website at any time, without notice or liability,
               for any reason.
             </div>
@@ -209,15 +223,14 @@ const TermsConditions = () => {
               <h2>Privacy</h2>
               <br />
               Entire Agreement: These Terms constitute the entire agreement
-              between you and [Company Name] regarding your use of the Website,
+              between you and World International Investment Plc regarding your use of the Website,
               superseding any prior agreements or understandings.
             </div>
-
-         </div>
-                  </div>
-
-              </div>
-              <SideBar/><TopBtn/>
+          </div>
+        </div>
+      </div>
+      <SideBar />
+      <TopBtn />
     </div>
   );
 };

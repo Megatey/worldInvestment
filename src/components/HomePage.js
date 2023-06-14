@@ -1,12 +1,8 @@
 
 import React, { useEffect, useState } from "react";
-import Navbar from "./Navbar";
 import Carousel from './Carousel';
-import Footer from './Footer';
 import Help from './Help';
-import Interest from './Interest';
 import Menu from './Menu';
-import News from './News';
 import Other from './Other';
 import Story from './Story';
 import TopBtn from './TopBtn';

@@ -10,7 +10,7 @@ import ContactDialogue from "./ContactDialogue";
       <div className="about-us-div">
         <div className="about-us-div-header">
         <Link to={'/'}>   <span className="about-us-div-header-span">Home </span></Link>
-          <span> {'<'} </span>
+          <span> {'>'} </span>
           <span className="about-us-div-header-span">Feed Backs</span>
         </div>
 

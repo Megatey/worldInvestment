@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer-wrap">
@@ -7,26 +7,24 @@ const Footer = () => {
         <div className="footer1">
           <span className="footer1-span">
             <h1>More in Home</h1>
-            <span> Brief History</span>
-            <span>Board Member</span>
-            <span>About Us</span>
-            <span>Featured Content</span>
-            <span>Help</span>
+            <Link to={'/history'}><span> Brief History</span></Link>
+            <Link to={'/board-member'}> <span>Board Member</span></Link>
+            <Link to={'/about-us'}>  <span>About Us</span></Link>
           </span>
 
           <span className="footer1-span">
             <h1>More about Us</h1>
-            <span> Who we are</span>
-            <span>What we do</span>
-            <span>Our Values</span>
-            <span>Our major projects</span>
+            <Link to={'/who-we-are'}> <span> Who we are</span></Link>
+            <Link to={'/what-we-do'}> <span>What we do</span></Link>
+            <Link to={'/our-values'}> <span>Our Values</span></Link>
+            <Link to={'/project'}> <span>Our major projects</span></Link>
           </span>
 
           <span className="footer1-span">
             <h1>Can we help?</h1>
-            <span>Privacy Notices</span>
-            <span>Terms & Condition</span>
-            <span>Feed Backs</span>
+            <Link to={'/privacy-notices'}>  <span>Privacy Notices</span></Link>
+            <Link to={'/terms-condition'}> <span>Terms & Condition</span></Link>
+            <Link to={'/contact-us'}>  <span>Feed Backs</span></Link>
           </span>
 
           <span className="footer1-span">
