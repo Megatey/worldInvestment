@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect,useState} from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Story from "./Story";
@@ -10,26 +10,47 @@ const BoardMember = () => {
     duration: 1200,
   });
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  const listenToScroll = () => {
+    let heightToHideFrom = 20;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+  
+    if (winScroll > heightToHideFrom) {
+      !isVisible && // 
+        setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
+  });
+
   return (
     <div className="about-us pad-top">
       <div className="about-us-div">
         <div className="about-us-div-header">
+          <span className='display-none'> {"<"} </span>
           <Link to={"/"}>
             {" "}
             <span className="about-us-div-header-span">Home </span>
           </Link>
-          <span> {">"} </span>
+          <span className="display-none-reverse"> {">"} </span>
           <Link to={"/about-us"}>
             {" "}
-            <span className="about-us-div-header-span">About Us</span>
+            <span className="about-us-div-header-span display-none-reverse">About Us</span>
           </Link>
-          <span> {">"} </span>
+          <span className="display-none-reverse"> {">"} </span>
           <Link to={"/our-heritage"}>
             {" "}
-            <span className="about-us-div-header-span">Heritage</span>
+            <span className="about-us-div-header-span display-none-reverse">Heritage</span>
           </Link>
-          <span> {">"} </span>
-          <span className="about-us-div-header-span">Board Member</span>
+          <span className="display-none-reverse"> {">"} </span>
+          <span className="about-us-div-header-span display-none-reverse">Board Member</span>
         </div>
         <div className="mid" data-aos="slide-up">
           <h1>EXECUTIVE COMMITTEE</h1> The World International Investment
@@ -59,7 +80,7 @@ const BoardMember = () => {
           </div>
         </span>
         <span className="menu-span">
-          <div className="menu-img mic-two"></div>
+          <div className="menu-img mic-two "></div>
           <div className="menu-img-content mcs">
             <h2 className="menu-span-h2">
               {" "}
@@ -88,7 +109,7 @@ const BoardMember = () => {
         </span>
       </div>
       <Story />
-      <TopBtn/>
+      {isVisible && <TopBtn />}
       <SideBar/>
     </div>
   );

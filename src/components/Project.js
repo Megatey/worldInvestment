@@ -1,30 +1,51 @@
-import React from "react";
+import React,{useEffect,useState} from 'react'
 import { Link } from "react-router-dom";
 import TopBtn from "./TopBtn";
 import SideBar from "./SideBar";
 import Heritage from "./Heritage";
 import Interest from "./Interest";
 const Project = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const listenToScroll = () => {
+    let heightToHideFrom = 20;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+  
+    if (winScroll > heightToHideFrom) {
+      !isVisible && // 
+        setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
+  });
   return (
     <div className="about-us pad-top">
       <div className="about-us-div">
         <div className="about-us-div-header">
+          <span className='display-none'> {'<'}</span>
           <Link to={"/"}>
             {" "}
             <span className="about-us-div-header-span">Home </span>
           </Link>
-          <span>{">"}</span>
+          <span className='display-none-reverse'>{">"}</span>
           <Link to={"/about-us"}>
             {" "}
-            <span className="about-us-div-header-span">About Us</span>
+            <span className="about-us-div-header-span display-none-reverse">About Us</span>
           </Link>
-          <span> {">"} </span>
+          <span className='display-none-reverse'> {">"} </span>
           <Link to={"/our-heritage"}>
             {" "}
-            <span className="about-us-div-header-span">Heritage</span>
+            <span className="about-us-div-header-span display-none-reverse">Heritage</span>
           </Link>
-          <span>{">"} </span>
-          <span className="about-us-div-header-span">Project</span>
+          <span className='display-none-reverse'>{">"} </span>
+          <span className="about-us-div-header-span display-none-reverse">Project</span>
         </div>
         <div className="about-us-div-header-img project">
           <span className="about-us-div-header-img-txt display-none-reverse">
@@ -162,7 +183,7 @@ const Project = () => {
           </div>
         </span>
       </div>
-      <TopBtn />
+      {isVisible && <TopBtn />}
       <SideBar />
       <Heritage />
       <Interest />

@@ -9,9 +9,10 @@ import ContactDialogue from "./ContactDialogue";
       {showCatalogue && <ContactDialogue setShowCatalogue={setShowCatalogue}/>}
       <div className="about-us-div">
         <div className="about-us-div-header">
+          <span className='display-none'> {'<'} </span>
         <Link to={'/'}>   <span className="about-us-div-header-span">Home </span></Link>
-          <span> {'>'} </span>
-          <span className="about-us-div-header-span">Feed Backs</span>
+          <span className='display-none-reverse'> {'>'} </span>
+          <span className="about-us-div-header-span display-none-reverse">Feed Backs</span>
         </div>
 
         <div className="about-us-div-header-img audhi">

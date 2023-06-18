@@ -5,11 +5,12 @@ const WhatWeDoComponents = () => {
     <div className="about-us pad-top">
       <div className="about-us-div">
         <div className="about-us-div-header">
+          <span className='display-none'> {'<'}</span>
         <Link to={'/'}>   <span className="about-us-div-header-span">Home </span></Link>
-          <span>  {'>'} </span>
-          <Link to={'/about-us'}>   <span className="about-us-div-header-span">About Us</span></Link>
-          <span> {'>'} </span>
-          <span className="about-us-div-header-span">What We Do</span>
+          <span className="display-none-reverse">  {'>'} </span>
+          <Link to={'/about-us'}>   <span className="about-us-div-header-span display-none-reverse">About Us</span></Link>
+          <span className="display-none-reverse"> {'>'} </span>
+          <span className="about-us-div-header-span display-none-reverse">What We Do</span>
         </div>
         <div className="padding-wrap">
           <div className="about-us-div-header-img audhi view">
@@ -106,7 +107,7 @@ const WhatWeDoComponents = () => {
           vital supplies of oil and natural gas. Powering Progress is
           underpinned by our core values of honesty, integrity and respect for
           people, and our focus on safety. These include our commitment to doing
-          business in an ethical and transparent way. Shell is changing to be
+          business in an ethical and transparent way. World International Investment Plc is changing to be
           more focused, more resilient and more competitive – not just for the
           energy system of today, but for the energy system of the future.
         </div>

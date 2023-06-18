@@ -12,14 +12,8 @@ const Story = () => {
         WIIPC’s businesses and delivering on its corporate strategy.
         <button onClick={() => navigate('/ceo-speech')}>Read the speeches</button>
       </div></div>
-      <div className="story-div-img">
-        {" "}
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY" title="ceo-speech"
-        ></iframe>
-      </div>
+      <div className="story-div-img  mic-one cntr">
+             </div>
     </div></section>
   );
 };

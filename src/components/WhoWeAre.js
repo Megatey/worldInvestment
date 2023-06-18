@@ -1,19 +1,40 @@
-import React from "react";
+import React,{useEffect,useState} from 'react'
 import Interest from "./Interest";
 import TopBtn from "./TopBtn";
 import SideBar from "./SideBar";
 import Heritage from "./Heritage";
 import { Link } from "react-router-dom";
 const WhoWeAre = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const listenToScroll = () => {
+    let heightToHideFrom = 20;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+  
+    if (winScroll > heightToHideFrom) {
+      !isVisible && // 
+        setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
+  });
   return (
     <div className="about-us pad-top">
       <div className="about-us-div">
         <div className="about-us-div-header">
+          <span className='display-none'> {'<'}</span>
         <Link to={'/'}>     <span className="about-us-div-header-span">Home </span></Link>
-          <span> {'>'}</span>
-          <Link to={'/about-us'}>   <span className="about-us-div-header-span">About Us</span></Link>
-          <span> {'>'} </span>
-          <span className="about-us-div-header-span">Who We Are</span>
+          <span className='display-none-reverse'> {'>'}</span>
+          <Link to={'/about-us'}>   <span className="about-us-div-header-span display-none-reverse">About Us</span></Link>
+          <span className='display-none-reverse'>  {'>'} </span>
+          <span className="about-us-div-header-span display-none-reverse">Who We Are</span>
         </div>
         <div className="about-us-div-header-img are">
           <span className="about-us-div-header-img-txt display-none-reverse">
@@ -62,7 +83,7 @@ const WhoWeAre = () => {
             deliver better safety and business performance.
           </span>
         </div>
-      </div><Heritage/><Interest/><SideBar/><TopBtn/>
+      </div><Heritage/><Interest/><SideBar/>{isVisible && <TopBtn />}
     </div>
   );
 };

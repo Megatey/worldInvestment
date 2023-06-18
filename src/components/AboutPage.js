@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const AboutPage = () => {
+
   return (
   
   
@@ -11,9 +12,10 @@ const AboutPage = () => {
           <div className="about-us-div">
             
             <div className="about-us-div-header"> 
+              <span className="display-none"> {'<'}</span>
             <Link to={'/'}> <span className="about-us-div-header-span">Home </span></Link>
-              <span> {'>'}</span>
-              <span className="about-us-div-header-span">About us</span>
+            <span className=" display-none-reverse">  {'>'}</span>
+              <span className="about-us-div-header-span display-none-reverse">About us</span>
             </div>
     
             <div className="about-us-div-header-img">

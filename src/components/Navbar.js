@@ -39,7 +39,8 @@ const Navbar = () => {
           </Link>
         </span>
         <div className="show-nav">
-          <span>
+          <Link to={"/search"}>
+         <span> <i class="fa-solid fa-magnifying-glass i-con"></i></span></Link> <span>
             {" "}
             <input
               type="checkbox"
@@ -74,9 +75,10 @@ const Navbar = () => {
             <span className="nav2-spans nvs">CEO Speech</span>
           </a>
         </span>
+          <Link to={"/search"}>
         <span className="span2-nav1 s2n1">
           <i class="fa-solid fa-magnifying-glass"></i>
-        </span>
+        </span></Link>
       </div>
       {isNavOpen && <NavDrop/>}
     </div>

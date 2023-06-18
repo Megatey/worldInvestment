@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import ContactPage from './ContactPage'
 import Help from './Help'
 import Interest from './Interest'
@@ -6,12 +6,32 @@ import TopBtn from './TopBtn'
 import SideBar from './SideBar'
 
 const ContactUs = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const listenToScroll = () => {
+    let heightToHideFrom = 20;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+  
+    if (winScroll > heightToHideFrom) {
+      !isVisible && // 
+        setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
+  });
   return (
     <div>
         <ContactPage/>
        <Help/>
        <Interest/>
-      <TopBtn/>
+       {isVisible && <TopBtn />}
       <SideBar/>
     </div>
   )

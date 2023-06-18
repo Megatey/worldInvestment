@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect,useState} from 'react'
 import TopBtn from "./TopBtn";
 import SideBar from "./SideBar";
 import Menu from "./Menu";
@@ -6,13 +6,34 @@ import Heritage from "./Heritage";
 import Interest from "./Interest"; import { Link } from "react-router-dom";
 
 const CeoSpeech = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const listenToScroll = () => {
+    let heightToHideFrom = 20;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+  
+    if (winScroll > heightToHideFrom) {
+      !isVisible && // 
+        setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
+  });
   return (
     <div className="about-us pad-top">
       <div className="about-us-div">
             <div className="about-us-div-header"> 
+              <span className='display-none'> {'<'}</span>
             <Link to={'/'}> <span className="about-us-div-header-span">Home </span></Link>
-              <span> {'>'}</span>
-              <span className="about-us-div-header-span">CEO Speech</span>
+              <span className='display-none-reverse'> {'>'}</span>
+              <span className="about-us-div-header-span display-none-reverse">CEO Speech</span>
             </div>
         <div className="mid">
           <h1>The CEO Speech</h1>
@@ -104,7 +125,7 @@ const CeoSpeech = () => {
 Rt Capt. Charles Onuoha.<br/>
 CEO, World International Investment Plc
         </div>
-      </div><TopBtn/><SideBar/><Menu/><Heritage/><Interest/>
+      </div> {isVisible && <TopBtn />}<SideBar/><Menu/><Heritage/><Interest/>
     </div>
   );
 };

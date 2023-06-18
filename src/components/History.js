@@ -1,26 +1,47 @@
-import React from "react";
+import React,{useEffect,useState} from 'react'
 import Interest from "./Interest";
 import SideBar from "./SideBar";
 import TopBtn from "./TopBtn";
 import { Link } from "react-router-dom";
 const History = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const listenToScroll = () => {
+    let heightToHideFrom = 20;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+  
+    if (winScroll > heightToHideFrom) {
+      !isVisible && // 
+        setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
+  });
   return (
     <div className="about-us pad-top">
       <div className="about-us-div">
         <div className="about-us-div-header">
+          <span className='display-none'> {"<"} </span>
           <Link to={"/"}>
             {" "}
             <span className="about-us-div-header-span">Home </span>
           </Link>
-          <span> {">"} </span>
+          <span className="display-none-reverse"> {">"} </span>
           <Link to={"/about-us"}>
             {" "}
-            <span className="about-us-div-header-span">About Us</span>
+            <span className="about-us-div-header-span display-none-reverse">About Us</span>
           </Link>
-          <span> {">"} </span>
-          <span className="about-us-div-header-span">Heritage</span>
-          <span> {">"} </span>
-          <span className="about-us-div-header-span">History</span>
+          <span className='display-none-reverse'> {">"} </span>
+          <span className="about-us-div-header-span display-none-reverse">Heritage</span>
+          <span className='display-none-reverse'> {">"} </span>
+          <span className="about-us-div-header-span display-none-reverse">History</span>
         </div>
         <div className="about-us-div-header-img history">
           <span className="about-us-div-header-img-txt display-none-reverse">
@@ -119,7 +140,7 @@ const History = () => {
       </div>
       <Interest />
       <SideBar />
-      <TopBtn />
+      {isVisible && <TopBtn />}
     </div>
   );
 };

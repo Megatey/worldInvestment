@@ -16,6 +16,7 @@ import History from "./components/History";
 import Project from "./components/Project";
 import BoardMember from "./components/BoardMember";
 import CeoSpeech from "./components/CeoSpeech";
+import Search from "./components/Search";
 
 const App = () => {
  
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/project" element={<Project/>}/>
           <Route path="/board-member" element={<BoardMember/>}/>
           <Route path="/ceo-speech" element={<CeoSpeech/>}/>
+          <Route path="/search" element={<Search/>}/>
         </Routes>
       <Footer />
       </Router>
